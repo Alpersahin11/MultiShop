@@ -1,0 +1,16 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace MultiShop.Catalog.Dtos.ProductImageDtos
+{
+    public class GetByIDProductImageDto
+    {
+        public string ProductImageID { get; set; }
+        public string Image1 { get; set; }
+        public string Image2 { get; set; }
+        public string Image3 { get; set; }
+        public string ProductID { get; set; }
+    }
+}
