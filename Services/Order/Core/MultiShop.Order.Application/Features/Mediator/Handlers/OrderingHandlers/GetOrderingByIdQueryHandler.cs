@@ -14,16 +14,14 @@ namespace MultiShop.Order.Application.Features.Mediator.Handlers.OrderingHandler
     {
         private readonly IRepository<Ordering> _repository;
 
-            public GetOrderingByIdQueryHandler(IRepository<Ordering> repository)
-            {
-                _repository = repository;
-            }
+        public GetOrderingByIdQueryHandler(IRepository<Ordering> repository)
+        {
+            _repository = repository;
+        }
         public async Task<GetOrderingByIdQueryResult> Handle(GetOrderingByIdQuery request, CancellationToken cancellationToken)
         {
             var values = await _repository.GetByIdAsync(request.Id);
 
-            if (values == null)
-                return null;
 
             return new GetOrderingByIdQueryResult
             {

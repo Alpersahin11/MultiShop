@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace MultiShop.Order.Application.Features.CQRS.Commands.AddressCommands
 {
-    public class RemoveAddressComand
+    public class RemoveAddressCommand
     {
         public int Id { get; set; }
-        public RemoveAddressComand(int id)
+        public RemoveAddressCommand(int id)
         {
             Id = id;
         }

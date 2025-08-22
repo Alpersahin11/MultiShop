@@ -16,7 +16,7 @@ namespace MultiShop.Order.Application.Features.CQRS.Handlers.AddressHandlers
             _repository = repository;
         }
 
-        public async Task Handle(CreateAddressComand createAddressComand)
+        public async Task Handle(CreateAddressCommand createAddressComand)
         {
             await _repository.CreateAsync(new Address
             {

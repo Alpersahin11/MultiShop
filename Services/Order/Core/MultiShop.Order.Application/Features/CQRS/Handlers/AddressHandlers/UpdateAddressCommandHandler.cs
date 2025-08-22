@@ -15,7 +15,7 @@ namespace MultiShop.Order.Application.Features.CQRS.Handlers.AddressHandlers
         {
             _repository = repository;
         }
-        public async Task Handle(UpdateAddressComand command)
+        public async Task Handle(UpdateAddressCommand command)
         {
             var values = await _repository.GetByIdAsync(command.AdressID);
 

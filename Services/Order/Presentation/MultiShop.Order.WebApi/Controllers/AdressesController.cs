@@ -48,14 +48,14 @@ namespace MultiShop.Order.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateAddress(CreateAddressComand command)
+        public async Task<IActionResult> CreateAddress(CreateAddressCommand command)
         {
             await _createAddressCommandHandler.Handle(command);
             return Ok("Adres bilgisi başarıyla eklendi");
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateAddress(UpdateAddressComand command)
+        public async Task<IActionResult> UpdateAddress(UpdateAddressCommand command)
         {
             await _updateAddressCommandHandler.Handle(command);
             return Ok("Adres bilgisi başarıyla güncellendi");
@@ -64,7 +64,7 @@ namespace MultiShop.Order.WebApi.Controllers
         [HttpDelete]
         public async Task<IActionResult> RemoveAddress(int id)
         {
-            await _removeAddressCommandHandler.Handle(new RemoveAddressComand(id));
+            await _removeAddressCommandHandler.Handle(new RemoveAddressCommand(id));
             return Ok("Adres bilgisi başarıyla silindi");
         }
     }
